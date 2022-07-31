@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimidia</title>
+</head>
+<body>
+    <h1>Multímidia em sites</h1>
+    <hr>
+    <h2>Áudio em HTML 5</h2>
+    <hr>
+    <p>Down Whith Your Getup - Mini Vandals</p>
+    <audio src="midia/down-with-your-getup-mini-vandals.mp3" controls></audio>
+    <p>Pray - Anno Bomini Beats</p>
+    <audio preload="metadata" controls>
+        <source src="midia/pray-anno-bomini-beats.mp3" type="audio/mpeg">
+        <source src="midia/pray-anno-bomini-beats.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta a reprodução do arquivo. <a href="midia/pray-anno-bomini-beats.mp3" download="pray.mp3" target="_blank" type="audio/mpeg">Baixe aqui</a></p>
+    </audio>
+    <hr>
+    <h2>Vídeo em HTML 5</h2>
+    <hr>
+    <video width="400" height="225" poster="midia/capa-surf.jpg" controls>
+        <source src="midia/Skate.webm" type="video/webm">
+        <source src="midia/Skate.mp4" type="video/mp4">
+        <p>Seu navegador não consegue reproduzir o vídeo. <a href="midia/Skate.mp4" download="skate.mp4" target="_blank" type="video/mp4">Clique aqui para baixar</a></p>
+    </video>
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/QGsxW6m5Dec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr>
+</body>
+</html>

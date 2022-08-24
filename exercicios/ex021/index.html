@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pseudo-elementos</title>
+    <title>Groupping tags</title>
+    <style>
+        body {
+            background-color: lightseagreen;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: gray;
+            padding-top: 1px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.425);
+            border-radius: 15px;
+        }
+
+        nav {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav > a {
+            padding-left: 10px;
+            font-size: 12pt;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .especial:hover {
+            color: red;
+        
+        }
+        
+        .especial::before {
+            content: '⇒';
+            color: black;
+        }
+        .especial::after {
+            content: '⇐';
+            color: black;
+        }
+        
+        main {
+            background-color: gray;
+            padding-top: 1px;
+            padding-right: 15px;
+            padding-bottom: 1px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            box-shadow:
+            4px 4px 7px rgba(0, 0, 0, 0.425);
+            border-radius: 15px;
+        }
+
+        footer {
+            background-color: gray;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 1px;
+            padding-right: 15px;
+            padding-bottom: 1px;
+            padding-left: 10px;
+            box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.425);
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Site com Groupping tags</h1>
+        <nav>
+            <a href="#" class="especial">Link</a>
+            <a href="#" class="especial">Link</a>
+            <a href="#" class="especial">Link</a>
+            <a href="#" class="especial">Link</a>
+            <a href="#" class="especial">Link</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Notícias em destaque</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt facere neque, commodi corrupti voluptatum consectetur quo impedit ipsum molestiae fugiat reiciendis doloremque necessitatibus. Enim reiciendis, architecto facilis omnis sapiente necessitatibus?</p>
+        <section>
+            <h2>Outras notícias</h2>
+        </section>
+        <article>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas atque maiores aspernatur ab id veniam doloribus dolores fugiat vitae, facilis deserunt magni sapiente unde cumque aperiam? Nulla sit aperiam voluptate possimus commodi, nemo voluptatibus? Suscipit, aspernatur possimus! Fuga nostrum dolorum dolores, vel libero odio fugiat numquam officia unde. Ipsum, id! Velit incidunt explicabo maxime laborum doloremque, possimus iste illo quo nobis reiciendis numquam omnis esse ducimus quae cumque mollitia iusto impedit dicta doloribus laboriosam natus? Ducimus deserunt nesciunt saepe voluptatem iure error in id accusamus ratione quo, rem itaque sed a! Autem nulla tempora ea non perspiciatis quibusdam voluptate?. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero perspiciatis vel natus autem, repudiandae aspernatur commodi. Aspernatur ratione dolorem, fugiat ullam laudantium voluptates pariatur non. Nesciunt provident dolore eos nulla?</p>
+        </article>
+    </main>
+    <footer>
+        <p>Desenvolvido por Alex Sandro</p>
+    </footer>
+
 </body>
 </html>

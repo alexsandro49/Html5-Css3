@@ -5,48 +5,78 @@
     src: url(fontes/idroid.otf);
 }
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor0: #97ffdc;
+    --cor1: #189c9c;
+    --cor2: #075a5a;
+    --cor3: #9991919c;
+    --cor4: #117251;
+    --cor5: #97ffdc;
+    --cor6: #4ce9b5;
+    --cor7: #3cc497;
+
+    --fontePadrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonteDestaque: idroid, cursive;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fontePadrao);
+}
+
+
 
 body {
     margin: 0px;
-    background-color: rgb(151, 255, 220);
+    background-color: var(--cor0)
 }
 
 header {
-    background-image: linear-gradient( rgb(24, 156, 156), rgb(7, 90, 90));
+    background-image: linear-gradient( var(--cor1), var(--cor2));
     font: bolder;
-    padding-top: 10px;
+    padding-top: 20px;
     color: white;
 }
 
 h1#cabecalho {
+    font-family: Babel Neue;
     text-align: center;
     font-size: 2em;
 } 
 
 h2.cabecalho {
+    font-family: Babel Neue;
     text-align: center;
     font-size: 0.8em;
 
 }
 
-a.link {
+.container {
+    display: flex;
+    column-gap: 3%;
+    padding-left: 2%;
+    padding-bottom: 5px;
+}
+
+.menu {
+    font-size: 1.2em;
+    font: bolder;
+}
+
+.link {
     color: white;
     text-decoration: none;
+    padding: 1px
 }
-div.menu {
-    display: inline-block;
-    font-size: 1.2em;
-    margin-left: 1%;
-    padding: 5px;
-    text-align: justify;
-}
-div.menu:hover {
-    background-color: rgba(153, 145, 145, 0.61);
-    width: fit-content;
+
+
+.link:hover {
+    background-color: var(--cor3);
+    width: auto;
+    /* O container não pode ser flexbox por conta do :hover. Pense sobre, melhor voltar pro jeito antigo. */
 }
 
 main {
@@ -55,32 +85,43 @@ main {
     padding-right: 15px;
     padding-bottom: 1px;
     padding-left: 15px;
-    margin-right: 120px;
-    margin-left: 120px;
+    /* margin-right: 120px;
+    margin-left: 120px; */
+    min-width: 280px;
+    max-width: 1000px;
+    margin: auto;
     text-align: justify;
 }
 
 h1.principal {
-    font-family: idroid, Arial, Helvetica, sans-serif;
-    color: rgb(17, 114, 81);
+    font-family: var(--fonteDestaque);
+    background-color: var(--cor5);
+    color: var(--cor4);
     font-size: 1.5em;
     text-align: left;
 
 }
 
 h2.principal {
-    font-family: idroid, Arial, Helvetica, sans-serif;
-    color: rgb(17, 114, 81);
+    font-family: var(--fonteDestaque);
+    background-color: var(--cor5);
+    color: var(--cor4);
     font-size: 1.5em;
     text-align: left;
     padding-right: 10px;
     padding-left: 10px;
-    background-color: rgb(151, 255, 220);
 }
 
 
-img.imagem {
+.imagem {
     display: block;
+    width: 100%;
+    margin: 0px auto
+}
+
+.imagem-pequena {
+    display: block;
+    width: 50%;
     margin: 0px auto
 }
 
@@ -101,9 +142,9 @@ iframe.videoyt {
     width: 90%;
 }
 
-main > especial {
+especial {
     display: inline-block;
-    background-color: rgb(76, 233, 181);
+    background-color: var(--cor6);
     padding-top: 1px;
     padding-right: 15px;
     padding-bottom: 1px;
@@ -117,7 +158,7 @@ main > especial {
 h2.especial {
     font-family: idroid, Arial, Helvetica, sans-serif;
     color: white;
-    background-color: rgb(60, 196, 151);
+    background-color: var(--cor7);
     padding-right: 10px;
     padding-top: 10px;
     padding-left: 10px;
@@ -136,7 +177,7 @@ ul.lista {
     
 }
 footer {
-    background-image: linear-gradient( rgb(24, 156, 156), rgb(7, 90, 90));
+    background-image: linear-gradient( var(--cor1), var(--cor2));
     font: bolder;
     font-size: 0.5em;
     text-align: center;
